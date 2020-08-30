@@ -4,6 +4,10 @@ class User {
     private int points;
     private boolean moderator;
 
+    public User(){
+
+    }
+
     public User(String name,int points){
         this.name = name;
         this.points = points;

@@ -16,8 +16,8 @@ public class Main {
             System.out.printl(u.getName());
         }
     }
-        // Consumer é uma interface
-        //é uma prática comum criar classes anonimas
+        // Consumer é uma interface funcional,que recebe um argumento e não retorna nada.
+        //é uma prática comum criar classes anonimas(classes internas)
         //para tarefas simples
         class Mostrador implements Consumer<User> {
             public void accept(User u){
