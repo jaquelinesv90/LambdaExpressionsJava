@@ -27,8 +27,29 @@ interface MyInterface2(){
     public void method2();
 }
 
+//antes do java 8
+Runnable r = new Runnable(){
+    public void run(){
+        for(int i = 0; i<= 10;i++){
+            System.out.println(i);
+        }
+    }
+};
+new Thread(r).start();
+
+
 //exemplo instancia com expressão lambda
-
 Runnable r = () ->{
+    for(int i= 0; i<=10 ;i++){
+        System.out.println(i);
+    }
+};
+new Thread(r).start();
 
-}
+
+// fazendo o mesmo método com menos legibilidade
+new Thread(() -> {
+    for(int i = 0; i<= 10; i++){
+            System.out.println(i);
+    }
+}).start();
