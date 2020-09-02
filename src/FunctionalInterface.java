@@ -9,6 +9,8 @@
 //Uma interface que tem apenas um único método abstrato é uma interface funcional
 // ela pode ser instanciada atra´ves de uma expressão lambda
 
+// novo pacote do java 8, java.util.function, com uma série de interfaces funcionais
+
 @java.lang.FunctionalInterface
 interface FunctionalInterface {
         public void method1();
@@ -17,7 +19,6 @@ interface FunctionalInterface {
 public interface Consumer<T>{
     void accept(T t);
 }
-
 
 @java.lang.FunctionalInterface
 interface MyInterface2(){
@@ -37,7 +38,6 @@ Runnable r = new Runnable(){
 };
 new Thread(r).start();
 
-
 //exemplo instancia com expressão lambda
 Runnable r = () ->{
     for(int i= 0; i<=10 ;i++){
@@ -45,7 +45,6 @@ Runnable r = () ->{
     }
 };
 new Thread(r).start();
-
 
 // fazendo o mesmo método com menos legibilidade
 new Thread(() -> {
